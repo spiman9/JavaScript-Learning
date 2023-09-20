@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h1>This is the object learning</h1>
+    <script>
+        const product = {
+            name: 'socks',
+            price: 1090,
+            rating: {
+                stars: 5,
+                count: 99
+            },
+            fun: function greetMe(){
+                console.log(`Hello : ${product.name}`)
+            }
+        }
+
+        product.fun();
+
+        //product.color = 'black';
+        //delete product.color;
+
+
+
+        //console.log(product.price);
+        //console.log(product.name);
+        //console.log(product.color);
+        //product.color = 'black';
+        //console.log(product);
+
+        console.log(`Count : ${product.rating.count}`);
+        console.log(`stars are  : ${product.rating.stars}`);
+
+
+        let store = JSON.stringify(product);
+        let obj = JSON.parse(store);
+        console.log(store);
+        console.log(obj);
+
+    </script>
+</body>
+</html>

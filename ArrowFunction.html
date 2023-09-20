@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+</head>
+<body>
+    
+    <h1>This is for the arrow functions!!!!</h1>
+    <button onclick="" class="js-button">Click</button>
+
+    <script>
+        const add = (a , b)=>{
+            return a+b;
+        }
+
+        const sub = function(a , b){
+            return a-b;
+        }
+
+        // only one parameter than the () are optional
+        const greet = name => {
+            console.log("Hello ", name);
+        }
+
+        console.log(add(7,8));
+        console.log(sub(7,8));
+
+        greet("Pritham");
+
+        // one liner
+        const oneline = (a , b) => a+b;
+
+        console.log(oneline(7 , 8));
+
+
+        const btn = document.querySelector("button");
+        btn.addEventListener("click" , ()=>{
+            console.log("click!!!");
+        })
+
+        var function1 = ()=>{
+            console.log("2!!!");
+        }
+        
+        btn.addEventListener("click" ,function1 )
+
+        btn.removeEventListener("click" , function1);
+
+
+    </script>
+</body>
+</html>

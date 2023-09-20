@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Show();">Show : </button>
+    <button onclick="makeI();">Add to Cart</button>
+    <button>+2</button>
+    <button>+3</button>
+    <button>Reset Cart</button>
+    <br> Answer is : <p id="ans"></p>
+</body>
+<script>
+    let ans = 0;
+    const id1 = document.getElementById("ans");
+    
+    makeI = ()=>{
+        ans++;
+    }
+
+    Show = ()=>{
+        id1.innerHTML = ans;
+    }
+</script>
+</html>

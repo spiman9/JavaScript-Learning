@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom2</title>
+</head>
+<body>
+    <h1>Youtube Subscribe Button</h1>
+    <button onclick="Changed();" class="js-subscribe">Subscribe</button>
+
+
+
+    <script>
+        Changed = ()=>{
+            if(document.querySelector(".js-subscribe").innerHTML === "Subscribe"){
+                document.querySelector(".js-subscribe").innerHTML = "Subscribed";
+            }else{
+                document.querySelector(".js-subscribe").innerHTML = "Subscribe";
+            }
+        }
+    </script>
+</body>
+</html>

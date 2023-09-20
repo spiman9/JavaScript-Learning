@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Calculator</title>
+
+    <style>
+        button{
+            border: none;
+            background-color: greenyellow;
+            color: black;
+            padding-top: 10px;padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: black;
+            color: white;
+            transition: all 0.5s;
+        }
+
+        .Btn-Extra{
+            background-color: black;
+            color: white;
+        }
+
+        .input-css{
+            font-size: 15px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .input-css:hover{
+            border: 3px solid black;
+        }
+
+        label{
+            font-size: 25px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Amazon Shipping Button</h1>
+    <label for="">Enter the cost of item : </label>
+    <input type="text" placeholder="cost of Order" onkeydown="FunctionHandle(event);
+    " class="input-css"> <button onclick="Calculate();" class="btn-class">Calculate</button>
+
+    <h3>Calculated Tax is : <span class="res"></span></h3>
+
+
+    <script>
+        Calculate =()=>{
+            let cost = document.querySelector("input").value;
+            const res = document.querySelector("span");
+            console.log(cost);
+            if(cost){
+                let num = Number(cost);
+                // console.log(num);
+                let ans = num * 0.25;
+                res.innerHTML = `Rs ${ans}`;
+            }else{
+                res.innerHTML = "Try again invalid value!!!";
+            }
+
+            //Button styling
+            /*
+            document.querySelector(".btn-class").innerHTML = "Calculated";
+            document.querySelector(".btn-class").classList.add("Btn-Extra");
+            */
+        }
+        function FunctionHandle(event)
+        {
+            if(event.key == 'Enter'){
+                Calculate();
+            }
+        }
+        
+    </script>
+</body>
+</html>

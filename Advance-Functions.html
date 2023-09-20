@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>This is for the advance functions!!!</h1>
+
+
+    <script>
+        function greeting(){
+            console.log("Hello");
+        }
+
+        greeting();
+        
+        const val = function(){
+            console.log("Hello2");
+        };
+
+        console.log(val);
+        console.log(typeof val);
+        // Anonymous function : where the function dosn't have a function name
+        const obj = {
+            num : 2,
+            greeting : function(name){
+                console.log("Hello3" , name);
+            }
+        }
+
+        obj.greeting("yepse");
+
+
+
+
+        function fun1(){
+            console.log(function1);
+        }
+
+        function fun2(para){
+            para();
+        }
+
+        //callback function
+        fun2(function(){
+            console.log("I am the inner function!!!");
+        });
+
+
+    </script>
+</body>
+</html>
